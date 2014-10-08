@@ -17,7 +17,8 @@
     
     //all route will pass middleware
     app.use(middleware)
-    ```  
+    ```
+    
   ###set middleware to some specific routes
     ```javascript
     var express = require('express')
