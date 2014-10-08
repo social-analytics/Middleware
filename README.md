@@ -10,7 +10,19 @@
 ## Middleware Config
   + Set middleware for all routes or some specific routes
   
-  
+  ###middleware for all route
+
+    
+  ###middleware for some specific routes
+    ```javascript
+    var express = require('express')
+    var middleware = require(Middleware)    
+    
+    var app = express()
+    
+    //only routes like /name/xxx will pass the middleware
+    app.use('/name', middleware)
+    ```
 ## Universal Middleware
   + Express 4 has remove many middlewares which are auto included in express 3. Below are 3 kinds of middleware that we will use.
 
