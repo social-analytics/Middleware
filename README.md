@@ -8,7 +8,9 @@
   3. [Customed Middleware](#customed middleware)
 
 ## Middleware Config
-
+  + Set middleware for all routes or some specific routes
+  
+  
 ## Universal Middleware
   + Express 4 has remove many middlewares which are auto included in express 3. Below are 3 kinds of middleware that we will use.
 
