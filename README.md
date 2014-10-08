@@ -12,7 +12,7 @@
   
   ###middleware for all route
     ```javascript
-    var express = require('express)
+    var express = require('express')
     var middleware = require(Middleware)
     
     var app = express()
