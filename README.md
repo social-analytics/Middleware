@@ -6,6 +6,7 @@
   1. [Middleware Config](#middleware config)
   2. [Universal Middleware](#universal middleware)
   3. [Customed Middleware](#customed middleware)
+  4. [Note](#note)
 
 ## Middleware Config
   + Set middleware for all routes or some specific routes
@@ -73,3 +74,25 @@
 ## Customed Middleware
 
 
+## Note
+  + Here is some problem I met
+  
+  ###Redirect loop
+  in middleware
+    ```javascript
+    if(req.session.login){
+      next()
+    }else{
+      res.redirect('/login')
+    }
+    ```
+  in route
+    ```javascript
+    //this will lead redirect loop. Since all path '/.../xxx' will pass middleware, so does the login page. So you will have a loop here 
+    route.use('/', middleware)
+    
+    //correct way
+    route.use('/name', middleware)
+    ```
+  
+  
