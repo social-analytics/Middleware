@@ -11,7 +11,15 @@
   + Set middleware for all routes or some specific routes
   
   ###middleware for all route
-
+    ```javascript
+    var express = require('express)
+    var middleware = require(Middleware)
+    
+    var app = express()
+    
+    //all routes will pass middleware
+    app.use(middleware)
+    ```
     
   ###middleware for some specific routes
     ```javascript
