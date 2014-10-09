@@ -9,7 +9,7 @@
   4. [Note](#note)
 
 ## Middleware Config
-  + Set middleware for all routes or some specific routes
+  Set middleware for all routes or some specific routes
   
   ###middleware for all route
     ```javascript
@@ -33,7 +33,7 @@
     app.use('/name', middleware)
     ```
 ## Universal Middleware
-  + Express 4 has remove many middlewares which are auto included in express 3. Below are 3 kinds of middleware that we will use.
+  Express 4 has remove many middlewares which are auto included in express 3. Below are 3 kinds of middleware that we will use.
 
   ###body-parser
     ```javascript
@@ -75,7 +75,7 @@
 
 
 ## Note
-  + Here is some problem I met
+  Here are some problems I met
   
   ###Redirect loop
   in middleware
