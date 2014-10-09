@@ -12,7 +12,6 @@
   Set middleware for all routes or some specific routes.
   
   **middleware for all route**
-  
     ```javascript
     var express = require('express')
     var middleware = require(Middleware)
@@ -24,7 +23,6 @@
     ```
     
   **middleware for some specific routes**
-  
     ```javascript
     var express = require('express')
     var middleware = require(Middleware)    
@@ -38,7 +36,6 @@
   Express 4 has remove many middlewares which are auto included in express 3. Below are 3 kinds of middleware that we will use.
 
   **body-parser**
-  
     ```javascript
     var express = require('express')
     var bodyParser = require('body-parser')
@@ -54,7 +51,6 @@
     [More Info](https://github.com/expressjs/body-parser)
   
   **express-session**
-  
     ```javascript
     var express = require('express')
     var session = require('express-session')
@@ -69,7 +65,7 @@
     ```javascript
     var express = require('express')
     var cookieParser = require('cookie-parser')
-
+    
     var app = express()
     app.use(cookieParser())
     ```
@@ -82,7 +78,6 @@
   Here are some problems I met
   
   **Redirect loop**
-  
   in middleware
     ```javascript
     if(req.session.login){
@@ -91,6 +86,7 @@
       res.redirect('/login')
     }
     ```
+    
   in route
     ```javascript
     //this will lead redirect loop. Since all path '/.../xxx' will pass middleware, so does the login page. So you will have a loop here 
