@@ -9,9 +9,9 @@
   4. [Note](#note)
 
 ## Middleware Config
-  Set middleware for all routes or some specific routes
+  Set middleware for all routes or some specific routes.
   
-  ###middleware for all route
+  **middleware for all route**
     ```javascript
     var express = require('express')
     var middleware = require(Middleware)
@@ -22,7 +22,7 @@
     app.use(middleware)
     ```
     
-  ###middleware for some specific routes
+  **middleware for some specific routes**
     ```javascript
     var express = require('express')
     var middleware = require(Middleware)    
@@ -35,7 +35,7 @@
 ## Universal Middleware
   Express 4 has remove many middlewares which are auto included in express 3. Below are 3 kinds of middleware that we will use.
 
-  ###body-parser
+  **body-parser**
     ```javascript
     var express = require('express')
     var bodyParser = require('body-parser')
@@ -50,7 +50,7 @@
     ```
     [More Info](https://github.com/expressjs/body-parser)
   
-  ###express-session
+  **express-session**
     ```javascript
     var express = require('express')
     var session = require('express-session')
@@ -61,7 +61,7 @@
     ```
     [More Info](https://github.com/expressjs/session)
   
-  ###cookie-parser
+  **cookie-parser**
     ```javascript
     var express = require('express')
     var cookieParser = require('cookie-parser')
@@ -77,7 +77,7 @@
 ## Note
   Here are some problems I met
   
-  ###Redirect loop
+  **Redirect loop**
   in middleware
     ```javascript
     if(req.session.login){
